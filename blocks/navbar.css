@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px; /* add breathing room */
+    background: white; /* optional: can be transparent if you want */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* soft shadow under navbar */
+    position: relative;
+    z-index: 10;
+  }
+  
+  .navbar__logo {
+    height: 65px;
+    width: 65px;
+    margin-left: 20px; /* Clean margin instead of weird left positioning */
+  }
+  
+  .navbar__links {
+    display: flex;
+    gap: 50px; /* space between each link */
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    margin-right: 75px;
+    padding: 0;
+  }
+  
+  .navbar__link {
+    text-decoration: none;
+    color: rgb(2, 31, 248); /* match the site's blue */
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar__link:hover {
+    color: rgb(102, 178, 255); /* lighter blue on hover */
+  }
+  

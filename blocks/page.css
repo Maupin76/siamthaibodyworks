@@ -1,0 +1,9 @@
+.page{
+    max-width: 1440px;
+    margin: 0 auto; 
+    font-family: "indieFlower", cursive, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: black;
+}
