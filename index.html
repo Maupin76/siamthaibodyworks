@@ -12,23 +12,29 @@
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body>
+  <div class="page">
 
   <!-- Header -->
   <header class="header">
     <div class="navbar">
       <img class="navbar__logo" src="./images/MenuBarTransparentLogo1.png" alt="Siam Thai Body Works Logo">
+
+      <!-- Hamburger Button -->
+      <button class="navbar__toggle" id="navbar-toggle">
+        ☰
+      </button>
       
       <ul class="navbar__links">
         <li><a class="navbar__link" href="#">Home</a></li>
         <li><a class="navbar__link" href="#pricing">Services</a></li>
         <li><a class="navbar__link" href="#contact_us">Contact Us</a></li>
         <li><a class="navbar__link" href="#about_us">About</a></li>
-        <li><a class="navbar__link" href="./book_now.html">Book</a></li>
+        <li><a class="navbar__link" href="#contact_us">Book</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- Hero Section (full-width) -->
+  <!-- Hero Section -->
  <div class="hero-section">
   <div class="hero-section__top">
     
@@ -44,18 +50,22 @@
     <!-- Image container -->
     <div class="hero-section__image-container">
       <img src="./images/aromaTherapy.jpg" alt="Aroma Therapy" class="hero-section__main-image">
+
+      <div class="hero-section__buttons">
+        <a href="#contact_us" class="hero-section__link">
+          <button class="hero-section__button hero-section__button_action_book">Book Now</button>
+        </a>
+      </div>
     </div>
 
   </div>
 
-  <div class="hero-section__buttons">
-    <a href="./book_now.html" class="hero-section__link">
-      <button class="hero-section__button hero-section__button_action_book">Book Now</button>
-    </a>
+  <!-- <div class="hero-section__buttons">
+    <button id="book-now" class="hero-section__button hero-section__button_action_book">Book Now</button>
     <a href="#contact_us" class="hero-section__link">
       <button class="hero-section__button hero-section__button_action_contact">Contact Us</button>
     </a>
-  </div>
+  </div> -->
 </div>
 
   <!-- Pricing Section (full-width) -->
@@ -158,6 +168,28 @@
   </div>
 </div>
 
+<!-- Booking Modal -->
+<div id="booking-overlay" class="booking-overlay">
+  <div class="booking-modal">
+    <button class="modal-close-button" id="close-booking">&times;</button>
+    <h2 class="modal-title">Select a Day and Time Slot</h2>
+
+    <!-- New: Day picker -->
+    <div id="day-picker" class="day-picker">
+      <select id="day-select">
+        <!-- Options will be added dynamically -->
+      </select>
+    </div>
+
+    <!-- Time slots -->
+    <div id="booking-calendar">
+      <!-- Time slots buttons go here -->
+    </div>
+  </div>
+</div>
+
+
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -166,6 +198,6 @@
 
   <!-- JavaScript for slideshow -->
   <script src="./script.js"></script>
-
+  </div>
 </body>
 </html>

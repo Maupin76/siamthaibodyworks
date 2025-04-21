@@ -1,9 +1,9 @@
-.page{
-    max-width: 1440px;
-    margin: 0 auto; 
-    font-family: "indieFlower", cursive, sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.5;
-    color: black;
-}
+.page {
+    width: 100%;
+    min-height: 100vh; /* Make sure it covers full viewport height */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+  }
+  

@@ -1,6 +1,6 @@
 /* === Pricing Section Background === */
 .pricing-section {
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     background: linear-gradient(to bottom, white, rgba(2, 31, 248, 0.05));
     padding: 80px 20px;

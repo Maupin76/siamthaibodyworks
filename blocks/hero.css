@@ -9,27 +9,48 @@
     }
   }
 
+  @keyframes fadeInButton {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes pulseButton {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
 .hero-section {
     text-align: center;
     background: linear-gradient(to bottom, rgb(2, 31, 248), white);
-    padding: 60px 0; /* Only top/bottom padding, no left/right padding */
+    padding: 90px 0 30px;
     font-size: 1.5em;
-    width: 100vw; /* Force to 100% viewport width */
-    overflow-x: hidden; /* Prevent accidental horizontal scroll */
+    width: 100%;
+    overflow-x: hidden;
     box-sizing: border-box;
   }
   
   
   .hero-section__content {
-    max-width: 1400px; /* bigger for nice layouts on large screens */
+    max-width: 1400px; 
     margin: 0 auto;
   }
   
   .hero-section__top {
     display: flex;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
-    gap: 60px; /* more breathing room */
+    gap: 60px;
     position: relative;
     flex-wrap: wrap;
   }
@@ -37,21 +58,21 @@
   .hero-section__logo-container {
     position: relative;
     z-index: 2;
-    transform: translateX(15px); /* or maybe 60px if you want bigger overlap */
+    transform: translateX(15px);
   }
   
   .hero-section__logo {
-    width: 400px;
+    width: 350px;
     height: auto;
     animation: slideInLogo 1s ease forwards;
-    filter: drop-shadow(2px 2px 6px rgba(229, 224, 224, 1)); /* NEW */
+    filter: drop-shadow(2px 2px 6px rgba(229, 224, 224, 1));
   }
 
   .hero-section__subtitle {
     margin-top: 20px;
     font-size: 22px;
     font-weight: 500;
-    color: rgb(2, 31, 248); /* matches your blue theme */
+    color: rgb(2, 31, 248);
     text-align: center;
   }
   
@@ -60,17 +81,17 @@
   }
   
   .hero-section__main-image {
-    width: 750px;
-    height: 400px;
+    width: 850px;
+    height: 425px;
     object-fit: cover;
     border-radius: 12px;
     transition: opacity 1s ease-in-out;
   }
   
-  
-  
   .hero-section__buttons {
-    margin-top: 50px;
+    position: absolute;
+    bottom: 40%;
+    left: 270px;
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -80,18 +101,19 @@
   .hero-section__button {
     background: linear-gradient(45deg, rgb(2, 31, 248), rgb(102, 178, 255));
     border: none;
-    border-radius: 8px;         /* Less round (was 25px) */
-    padding: 18px 40px;         /* Bigger button */
-    font-size: 20px;            /* Slightly bigger text */
+    border-radius: 8px;
+    padding: 18px 40px;
+    font-size: 50px;
     color: white;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    opacity: 0; /* NEW: Start invisible */
+    animation: fadeInButton 1.5s ease forwards, pulseButton 2.5s ease-in-out 1.5s infinite; /* NEW */
   }
-  
   
   .hero-section__button:hover {
     background: linear-gradient(45deg, rgb(102, 178, 255), rgb(2, 31, 248));
-    transform: translateY(-3px); /* slight lift on hover */
+    transform: translateY(-3px);
   }
   

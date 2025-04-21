@@ -1,13 +1,19 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 40px; /* add breathing room */
-    background: white; /* optional: can be transparent if you want */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* soft shadow under navbar */
-    position: relative;
-    z-index: 10;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* very high to stay on top */
+  background: white; /* make sure background is not transparent */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* soft shadow when scrolling */
+  box-sizing: border-box;
+}
+
+
   
   .navbar__logo {
     height: 65px;
