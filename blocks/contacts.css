@@ -11,10 +11,10 @@
   .contact-details {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     max-width: 1300px;
     margin: 0 auto;
-    gap: 200px;
+    gap: 75px;
   }
   
   .contact-info {
@@ -80,6 +80,7 @@
     justify-content: space-between;
     border-bottom: 1px solid #ddd;
     padding-bottom: 6px;
+    margin-right: 25px;
     font-size: 18px;
   }
   

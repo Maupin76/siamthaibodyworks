@@ -1,5 +1,3 @@
-/* === Responsive Design === */
-
 /* Tablets (up to 1024px) */
 @media (max-width: 1024px) {
   /* HERO */
@@ -8,7 +6,7 @@
     gap: 30px;
   }
   .hero-section__buttons {
-    bottom: 20px;
+    bottom: 40%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -22,7 +20,7 @@
 
   /* PRICING */
   .pricing-section__container {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
   }
 
@@ -52,20 +50,18 @@
   }
 
   /* NAVBAR */
+  .navbar__toggle {
+    display: none;
+  }
+
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 10px;
-  }
-
-  .navbar__links {
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
+    flex-direction: row; /* <<< FIXED! */
+    justify-content: space-between;
     align-items: center;
-    margin-right: 0;
+    padding: 10px 20px;
+    
   }
-
+  
   .navbar__link {
     font-size: 18px;
   }
@@ -82,7 +78,7 @@
     margin-top: 10px;
   }
   .hero-section__buttons {
-    bottom: 5%;
+    bottom: 40%;
     left: 50%;
     transform: translateX(-50%);
     gap: 20px;
@@ -94,8 +90,17 @@
   }
 
   /* PRICING */
-  .pricing__list-item, .extras__list-item {
+  .pricing__list-item,
+  .extras__list-item {
     font-size: 18px;
+  }
+
+  .pricing-section__container {
+    /* flex-direction: column; */
+    align-items: center;
+    max-width: 90%; /* <<< instead of 1200px */
+    margin: 0 auto;
+    gap: 20px; /* <<< reduce gap between cards */
   }
 
   /* ABOUT */
@@ -112,57 +117,46 @@
   .contact-section {
     padding: 20px 10px;
   }
-  .contact-hours, .contact-info {
-    width: 100%;
+  .contact-info, .contact-hours {
+    flex: none;
+    width: 80%;
+    min-width: auto; /* <<< remove 600px/400px */
     text-align: center;
   }
   .contact-info__map iframe {
-    width: 100%;
-  }
-}
-
-/* Hamburger Menu Button */
-.navbar__toggle {
-  display: none;
-  font-size: 32px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: rgb(2, 31, 248);
-}
-
-/* Mobile Menu */
-@media (max-width: 767px) {
-  .navbar__links {
-    display: none;
-    flex-direction: row;
-    align-items: center;
-    background: white;
-    width: 100%;
-    position: absolute;
-    top: 70px; /* Push it under the navbar */
-    left: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 999; /* Make sure it shows above other things */
+    width: 80%;
+    height: 300px; /* already good */
+    border-radius: 12px;
   }
 
-  .navbar__links.open {
-    display: flex;
-  }
+ 
 
+  /* NAVBAR */
   .navbar__toggle {
     display: block;
-    font-size: 32px;
+    cursor: pointer;
     background: none;
     border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
     color: rgb(2, 31, 248);
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: 20px;
-    z-index: 1000; /* On top of everything */
+    transition: color 0.3s ease;
+  }
+
+  .navbar__links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 }
-
 
 /* Very Small Phones (up to 414px) */
 @media (max-width: 414px) {
@@ -176,6 +170,10 @@
   .hero-section__button {
     font-size: 24px;
     padding: 10px 20px;
+  }
+
+  .pricing-section__container {
+    max-width: 95%;
   }
 
   /* ABOUT */

@@ -1,45 +1,37 @@
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* very high to stay on top */
-  background: white; /* make sure background is not transparent */
-  padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* soft shadow when scrolling */
-  box-sizing: border-box;
+  justify-content: space-between; /* Push logo left, hamburger right */
+  align-items: center;            /* Center vertically */
+  padding: 0 20px;                /* Optional: space inside navbar */
+  height: 80px;                   /* Optional: consistent height */
 }
 
+.navbar__logo {
+  height: 50px;                   /* Adjust if needed to match hamburger size */
+}
 
-  
-  .navbar__logo {
-    height: 65px;
-    width: 65px;
-    margin-left: 20px; /* Clean margin instead of weird left positioning */
-  }
-  
-  .navbar__links {
-    display: flex;
-    gap: 50px; /* space between each link */
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    margin-right: 75px;
-    padding: 0;
-  }
-  
-  .navbar__link {
-    text-decoration: none;
-    color: rgb(2, 31, 248); /* match the site's blue */
-    font-size: 20px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar__link:hover {
-    color: rgb(102, 178, 255); /* lighter blue on hover */
-  }
-  
+.navbar__toggle {
+  display: none;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 50px; /* space between each link */
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  margin-right: 75px;
+  padding: 0;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: rgb(2, 31, 248); /* match the site's blue */
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: rgb(102, 178, 255); /* lighter blue on hover */
+}
