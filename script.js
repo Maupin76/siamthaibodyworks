@@ -98,8 +98,8 @@ daySelect.addEventListener('change', generateTimeSlots);
 
 
 // Google Calendar Integration
-const API_KEY = 'AIzaSyAYA5kmrdv0Gdx18_HXS5vHCrZL7J36MH8';
-const CALENDAR_ID = '28c361a33269fc00462bd2ef6aff8b464d68eea86cb8de1e1ca1f9473730709e@group.calendar.google.com';
+const API_KEY = '';
+const CALENDAR_ID = '';
 
 const calendarURL = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
 
