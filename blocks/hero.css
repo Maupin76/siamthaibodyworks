@@ -116,4 +116,59 @@
     background: linear-gradient(45deg, rgb(102, 178, 255), rgb(2, 31, 248));
     transform: translateY(-3px);
   }
+
+  @media (max-width: 1024px) {
+    .hero-section__top {
+      flex-direction: row;
+      gap: 30px;
+    }
+    .hero-section__buttons {
+      bottom: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .hero-section__logo {
+      width: 300px;
+    }
+    .hero-section__main-image {
+      width: 90%;
+      height: auto;
+    } 
+
+  }
+
+  @media (max-width: 767px) {
+    .hero-section__logo {
+      width: 250px;
+    }
+    .hero-section__subtitle {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .hero-section__buttons {
+      bottom: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-section__button {
+      font-size: 28px;
+      padding: 10px 20px;
+    } 
+    
+  }
+
+  @media (max-width: 414px) { 
+    .hero-section__logo {
+      width: 200px;
+    }
+    .hero-section__subtitle {
+      font-size: 16px;
+    }
+    .hero-section__button {
+      font-size: 24px;
+      padding: 10px 20px;
+    }
+  }
   

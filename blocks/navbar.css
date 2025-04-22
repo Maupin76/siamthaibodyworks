@@ -35,3 +35,48 @@
 .navbar__link:hover {
   color: rgb(102, 178, 255); /* lighter blue on hover */
 }
+
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    height: auto; /* Let it grow with content */
+  }
+
+  .navbar__logo {
+    margin-bottom: 10px;
+  }
+  
+  .navbar__links {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+    margin-right: 0; /* Remove the desktop margin */
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) { 
+  .navbar__toggle {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    color: rgb(2, 31, 248);
+    transition: color 0.3s ease;
+  }
+
+  @media (max-width: 767px) {
+    .navbar__links {
+      gap: 15px;
+    }
+  
+    .navbar__link {
+      font-size: 18px;
+    }
+  }
+

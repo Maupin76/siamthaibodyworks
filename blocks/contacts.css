@@ -91,4 +91,32 @@
   .hours-list__time {
     color: rgb(2, 31, 248);
   }
+
+  @media (max-width: 1024px) { 
+    .contact-details {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-info iframe {
+      width: 90%;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 767px) { 
+    .contact-section {
+      padding: 20px 10px;
+    }
+    .contact-info, .contact-hours {
+      flex: none;
+      width: 80%;
+      min-width: auto; /* <<< remove 600px/400px */
+      text-align: center;
+    }
+    .contact-info__map iframe {
+      width: 80%;
+      height: 300px; /* already good */
+      border-radius: 12px;
+    }
+  }
   
