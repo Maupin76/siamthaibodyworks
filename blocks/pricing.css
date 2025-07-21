@@ -1,0 +1,85 @@
+/* === Pricing Section Background === */
+.pricing-section {
+    width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, white, rgba(2, 31, 248, 0.05));
+    padding: 80px 20px;
+    box-sizing: border-box;
+  }
+  
+  .pricing-section__container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  /* === Pricing Card === */
+  .pricing, .extras {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(2, 31, 248, 0.1); /* soft blue shadow */
+    border: 1px solid rgba(2, 31, 248, 0.2); /* very faint blue border */
+  }
+  
+  /* === Titles === */
+  .pricing__title,
+  .extras__title {
+    text-align: center;
+    font-size: 28px;
+    color: rgb(2, 31, 248);
+    margin-bottom: 20px;
+  }
+  
+  /* === List Items === */
+  .pricing__list,
+  .extras__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pricing__list-item,
+  .extras__list-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: 1024px) { 
+    .pricing-section__container {
+      /* flex-direction: column; */
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 767px) { 
+    .pricing__list-item,
+  .extras__list-item {
+    font-size: 18px;
+  }
+
+  .pricing-section__container {
+    /* flex-direction: column; */
+    align-items: center;
+    max-width: 90%; /* <<< instead of 1200px */
+    margin: 0 auto;
+    gap: 20px; /* <<< reduce gap between cards */
+  }
+  }
+
+  @media (max-width: 414px) { 
+    .pricing-section__container {
+      max-width: 95%;
+    }
+  }
+  

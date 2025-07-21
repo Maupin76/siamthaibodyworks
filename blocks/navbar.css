@@ -1,0 +1,82 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Push logo left, hamburger right */
+  align-items: center;            /* Center vertically */
+  padding: 0 20px;                /* Optional: space inside navbar */
+  height: 80px;                   /* Optional: consistent height */
+}
+
+.navbar__logo {
+  height: 50px;                   /* Adjust if needed to match hamburger size */
+}
+
+.navbar__toggle {
+  display: none;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 50px; /* space between each link */
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  margin-right: 75px;
+  padding: 0;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: rgb(2, 31, 248); /* match the site's blue */
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: rgb(102, 178, 255); /* lighter blue on hover */
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    height: auto; /* Let it grow with content */
+  }
+
+  .navbar__logo {
+    margin-bottom: 10px;
+  }
+  
+  .navbar__links {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+    margin-right: 0; /* Remove the desktop margin */
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) { 
+  .navbar__toggle {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    color: rgb(2, 31, 248);
+    transition: color 0.3s ease;
+  }
+
+  @media (max-width: 767px) {
+    .navbar__links {
+      gap: 15px;
+    }
+  
+    .navbar__link {
+      font-size: 18px;
+    }
+  }
+

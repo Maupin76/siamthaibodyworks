@@ -1,0 +1,174 @@
+@keyframes slideInLogo {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      /* transform: translateX(80px); */
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInButton {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes pulseButton {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+.hero-section {
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(2, 31, 248), white);
+    padding: 90px 0 30px;
+    font-size: 1.5em;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  
+  .hero-section__content {
+    max-width: 1400px; 
+    margin: 0 auto;
+  }
+  
+  .hero-section__top {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  .hero-section__logo-container {
+    position: relative;
+    z-index: 2;
+    transform: translateX(15px);
+  }
+  
+  .hero-section__logo {
+    width: 350px;
+    height: auto;
+    animation: slideInLogo 1s ease forwards;
+    filter: drop-shadow(2px 2px 6px rgba(229, 224, 224, 1));
+  }
+
+  .hero-section__subtitle {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(2, 31, 248);
+    text-align: center;
+  }
+  
+  .hero-section__image-container {
+    position: relative;
+  }
+  
+  .hero-section__main-image {
+    width: 850px;
+    height: 425px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .hero-section__buttons {
+    position: absolute;
+    bottom: 40%;
+    left: 270px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .hero-section__button {
+    background: linear-gradient(45deg, rgb(2, 31, 248), rgb(102, 178, 255));
+    border: none;
+    border-radius: 8px;
+    padding: 18px 40px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    opacity: 0; /* NEW: Start invisible */
+    animation: fadeInButton 1.5s ease forwards, pulseButton 2.5s ease-in-out 1.5s infinite; /* NEW */
+  }
+  
+  .hero-section__button:hover {
+    background: linear-gradient(45deg, rgb(102, 178, 255), rgb(2, 31, 248));
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 1024px) {
+    .hero-section__top {
+      flex-direction: row;
+      gap: 30px;
+    }
+    .hero-section__buttons {
+      bottom: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .hero-section__logo {
+      width: 300px;
+    }
+    .hero-section__main-image {
+      width: 90%;
+      height: auto;
+    } 
+
+  }
+
+  @media (max-width: 767px) {
+    .hero-section__logo {
+      width: 250px;
+    }
+    .hero-section__subtitle {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .hero-section__buttons {
+      bottom: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-section__button {
+      font-size: 28px;
+      padding: 10px 20px;
+    } 
+    
+  }
+
+  @media (max-width: 414px) { 
+    .hero-section__logo {
+      width: 200px;
+    }
+    .hero-section__subtitle {
+      font-size: 16px;
+    }
+    .hero-section__button {
+      font-size: 24px;
+      padding: 10px 20px;
+    }
+  }
+  

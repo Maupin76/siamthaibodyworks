@@ -1,0 +1,10 @@
+.page {
+  width: 100%;
+  min-height: 100vh; /* Make sure it covers full viewport height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+  

@@ -1,0 +1,86 @@
+/* Overlay Background */
+.booking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Smoked overlay */
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal Window */
+.booking-modal {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.modal-close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(2, 31, 248);
+}
+
+.day-picker {
+  margin-bottom: 20px;
+}
+
+#day-select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#booking-calendar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Slot Styles */
+.slot {
+  padding: 10px 20px;
+  margin: 5px;
+  background: rgb(2, 31, 248);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.slot:hover {
+  background: #1a2ee3;
+}
+
+.slot--booked {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+  
